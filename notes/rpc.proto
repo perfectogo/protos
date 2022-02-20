@@ -1,0 +1,13 @@
+syntax="proto3";
+
+package notes;
+
+import "messages.proto";
+
+service CatalogService {
+    rpc CreateNote(Note) returns (Note);
+    rpc GetNote(ByIdReq) returns (Note);
+    rpc GetNotes(ListReq) returns (NotesListResp);
+    rpc UpdateNote(Note) returns (Note);
+    rpc DeleteNote(ByIdReq) returns (Empty);
+}
