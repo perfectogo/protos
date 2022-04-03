@@ -1,0 +1,25 @@
+syntax="proto3";
+
+package catalog;
+
+import "message.proto";
+
+service CatalogService {
+    rpc CreateAuthor(Author) returns (Author);
+    rpc GetAuthor(ByIdReq) returns (Author);
+    rpc GetAuthors(ListReq) returns (AuthorListResp);
+    rpc UpdateAuthor(Author) returns (Author);
+    rpc DeleteAuthor(ByIdReq) returns (Empty);
+
+   /*  rpc CreateBook(Book) returns (Get_Book);
+    rpc GetBook(ByIdReq) returns (Get_Book);
+    rpc GetBooks(ListReq) returns (BookListResp);
+    rpc UpdateBook(Book) returns (Get_Book);
+    rpc DeleteBook(ByIdReq) returns (Empty); */
+
+    /* rpc CreateCategory(Category) returns (Category);
+    rpc GetCategory(ByIdReq) returns (Category);
+    rpc GetCategories(ListReq) returns (CategoryListResp);
+    rpc UpdateCategory(Category) returns (Category);
+    rpc DeleteCategory(ByIdReq) returns (Empty); */
+}

@@ -1,0 +1,70 @@
+syntax="proto3";
+
+package catalog;
+
+message Author {
+    string authorId = 1;
+    string authorName = 2;
+    string createdAt = 3;
+    string updatedAt = 4;
+    string deletedAt = 5;
+}
+
+/* message Category {
+    string categoryId = 1;
+    string categoryName = 2;
+    string categoryParentId = 3;
+    string createdAt = 4;
+    string updatedAt = 5;
+    string deletedAt = 6;
+}
+
+message Book {
+    string bookId = 1;
+    string bookName = 2;
+    string createdAt = 3;
+    string updatedAt = 4;
+    string deletedAt = 5;
+}
+
+message BookCategory {
+    string relationId = 1;
+    string bookId = 2;
+    string categoryId  = 3;
+    string createdAt = 4;
+    string updatedAt = 5;
+}
+
+message Get_Book {
+    string bookId = 1;
+    string bookName = 2;
+    repeated Author authors = 3;
+    repeated Category categories = 4;
+} */
+
+message ByIdReq {
+    string id = 1;
+}
+
+message ListReq {
+    int64 page = 1;
+    int64 limit = 2;
+    string search = 3;
+}
+
+message AuthorListResp {
+    repeated Author authors = 1;
+    int64 count = 2;
+}
+
+/* message CategoryListResp {
+    repeated Category categories = 1;
+    int64 count = 2;
+}
+
+
+message BookListResp {
+    repeated Get_Book books = 1;
+    int64 count = 2;
+}
+ */
